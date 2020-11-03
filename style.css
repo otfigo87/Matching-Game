@@ -1,0 +1,25 @@
+body {
+    background-color: lightgoldenrodyellow;}
+section {
+    text-align: center;}
+p { 
+    font-size: 1.1em;}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 1em;
+}
+span {
+     color: red;}
+img {
+    position: absolute;}
+div {
+    position: absolute;
+    width: 50%;
+    height: 500px;}
+#rightSide {
+    left: 50%;
+    border-left: 1px solid black;
+    }
