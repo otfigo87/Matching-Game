@@ -1,12 +1,13 @@
-let wins = 0;
+        let wins = 0;
         let losses = 0;
         let numberOfFaces = 5;
         const theLeftSide = document.getElementById("leftSide");
         const theRightSide = document.getElementById("rightSide");
+
         function generateFaces(){
 
             document.getElementById("btn").disabled = true;
-            for( i=1; i <= numberOfFaces; i++){
+            for ( i = 1; i <= numberOfFaces; i++ ) {
                 let randomTop = Math.floor(Math.random() * 400);
                 let randomLeft = Math.floor(Math.random() * 400);
                 const face = document.createElement("img");
@@ -21,7 +22,7 @@ let wins = 0;
             theRightSide.appendChild(leftSideImages);
 
             theLeftSide.lastChild.addEventListener("click", nextLevel)
-            document.getElementById("x").addEventListener("click", gameOver);
+            document.getElementById("main").addEventListener("click", gameOver);
 
         }
 
@@ -40,8 +41,8 @@ let wins = 0;
          }
          function gameOver(){
              document.getElementById("btn").disabled = false;
-             alert("Sorry You Lose! Try again");
-             document.getElementById("x").removeEventListener("click", gameOver);
+             alert("Sorry You Lost! Try again");
+             document.getElementById("main").removeEventListener("click", gameOver);
              theLeftSide.lastChild.removeEventListener("click", nextLevel)
              while(theLeftSide.firstChild){
                  theLeftSide.removeChild(theLeftSide.firstChild);
